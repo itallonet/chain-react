@@ -1,6 +1,6 @@
 # ChainReact
 
-ChainReact é um gerenciador de tarefas assíncronas com suporte a dependências, paralelismo e recuperação de falhas. Ele é projetado para executar tarefas de forma eficiente, garantindo que a ordem das dependências seja respeitada e que falhas sejam tratadas adequadamente.
+ChainReact é um gerenciador de tarefas assíncronas com suporte a dependências, paralelismo e recuperação de falhas. Ele é projetado para executar tarefas de forma eficiente, garantindo que a ordem das dependências seja respeitada e que falhas sejam tratadas adequadamente. 
 
 ---
 
@@ -11,6 +11,8 @@ ChainReact é um gerenciador de tarefas assíncronas com suporte a dependências
 - **Recuperação de Falhas:** Reexecução automática de tarefas com falha, com um limite configurável de tentativas.
 - **Logs Detalhados:** Relatórios completos sobre a execução de cada tarefa, incluindo falhas e tempos de execução.
 - **Modularidade:** Suporte para integração com funções definidas pelo usuário.
+- **Integração com RabbitMQ:** Possibilidade de usar RabbitMQ para gerenciar filas de mensagens entre tarefas.
+- **Persistência com SQLite:** Suporte a banco de dados SQLite para salvar estados e logs de tarefas.
 
 ---
 
@@ -48,7 +50,7 @@ Um log detalhado do processo, incluindo:
    ```
 2. Instale as dependências:
    ```bash
-   pip install -r requirements.txt
+   npm install
    ```
 
 ---
@@ -56,19 +58,23 @@ Um log detalhado do processo, incluindo:
 ## Uso
 
 1. Defina suas tarefas em um arquivo JSON ou diretamente no código.
-2. Execute o gerenciador:
+2. Configure o RabbitMQ e SQLite:
+   - Certifique-se de que o servidor RabbitMQ está em execução.
+   - Configure o acesso ao banco de dados SQLite.
+3. Execute o gerenciador:
    ```bash
-   python chainreact.py
+   node chainreact.js
    ```
-3. Observe o progresso e o log no terminal.
+4. Observe o progresso e o log no terminal.
 
 ---
 
 ## Estrutura do Projeto
 
-- **`chainreact.py`**: Arquivo principal do gerenciador.
+- **`chainreact.js`**: Arquivo principal do gerenciador.
 - **`tasks/`**: Diretório com exemplos de definição de tarefas.
 - **`logs/`**: Diretório para logs de execução.
+- **`db/`**: Diretório para o banco de dados SQLite.
 
 ---
 
