@@ -46,7 +46,7 @@ Um log detalhado do processo, incluindo:
 1. Clone o repositório:
    ```bash
    git clone https://github.com/itallonet/chain-react.git
-   cd chainreact
+   cd chain-react
    ```
 2. Instale as dependências:
    ```bash
